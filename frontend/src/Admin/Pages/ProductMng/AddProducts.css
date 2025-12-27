@@ -1,0 +1,116 @@
+/* Wrapper */
+.add-product {
+  max-width: 520px;
+  margin: 30px auto;
+  background: #fff7ec;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(201, 164, 122, 0.25);
+  font-family: "Poppins", sans-serif;
+  color: #4b3a26;
+}
+
+/* Heading */
+.add-product h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #4b3a26;
+}
+
+/* Input group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #5f4a34;
+}
+
+/* Inputs */
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e6d5bd;
+  background: #faf5ee;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.form-group input:focus {
+  border-color: #c9a47a;
+  box-shadow: 0 0 6px rgba(201, 164, 122, 0.4);
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.save-btn {
+  flex: 1;
+  background: #c9a47a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.st{
+  accent-color: #a3845f; 
+}
+.save-btn:hover {
+  background: #b58c64;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: #e6d5bd;
+  color: #4b3a26;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #d9c3a4;
+}
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e6d5bd;
+  background: #faf5ee;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+
+.form-group textarea:focus {
+  border-color: #c9a47a;
+  box-shadow: 0 0 6px rgba(201, 164, 122, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .add-product {
+    margin: 15px;
+    padding: 22px;
+  }
+}

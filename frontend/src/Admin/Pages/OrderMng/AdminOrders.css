@@ -1,0 +1,165 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.admin-orders {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.admin-orders h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #4b3621;
+  font-weight: 800;
+}
+
+/* =========================
+   ORDER CARD
+========================= */
+.order-card {
+  background: linear-gradient(145deg, #ffffff, #fff7ec);
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  border: 1px solid #e6d5bd;
+  box-shadow: 0 6px 18px rgba(210, 180, 140, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(210, 180, 140, 0.45);
+}
+
+/* =========================
+   TEXT
+========================= */
+.order-card p {
+  font-size: 15px;
+  color: #5c4a36;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* TOTAL */
+.ppp {
+  font-size: 18px;
+  font-weight: 800;
+  color: #4b3621;
+  margin: 10px 0 14px;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+.order-card h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4b3621;
+}
+
+/* =========================
+   STATUS LABEL
+========================= */
+.order-card label {
+  display: block;
+  margin-top: 16px;
+  font-weight: 700;
+  color: #4b3621;
+}
+
+/* =========================
+   STATUS DROPDOWN
+========================= */
+.order-card select {
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #d2b48c;
+  background: #fff;
+  color: #4b3621;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.order-card select:hover {
+  border-color: #c19a6b;
+}
+
+.order-card select:focus {
+  outline: none;
+  border-color: #c19a6b;
+  box-shadow: 0 0 0 2px rgba(193, 154, 107, 0.25);
+}
+
+/* =========================
+   DELIVERY ADDRESS
+========================= */
+.delivery-address {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #fffaf4;
+  border-radius: 14px;
+  border: 1px solid #eadcc8;
+}
+
+.delivery-address p {
+  margin: 4px 0;
+}
+
+/* =========================
+   ITEMS LIST
+========================= */
+.order-items p {
+  padding-left: 10px;
+  position: relative;
+}
+
+.order-items p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c19a6b;
+  font-weight: bold;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.order-card::after {
+  content: "";
+  display: block;
+  margin-top: 22px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #e6d5bd,
+    transparent
+  );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .admin-orders {
+    padding: 20px 12px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+
+  .admin-orders h2 {
+    font-size: 24px;
+  }
+}

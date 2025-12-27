@@ -1,0 +1,155 @@
+.payment-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  padding: 30px 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.payment-box {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+}
+
+.left-column,
+.right-column {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(210, 180, 140, 0.25);
+}
+
+h2 {
+  margin-bottom: 14px;
+  color: #4b3621;
+}
+
+/* ADDRESS */
+.address-card {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #eee2cf;
+  margin-bottom: 12px;
+  cursor: pointer;
+  background: #fffdf9;
+}
+
+.address-card.selected {
+  background: #fff3e6;
+  border-color: #d2b48c;
+}
+
+.add-address-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 16px;
+  border-radius: 14px;
+  border: 1px dashed #d2b48c;
+  background: transparent;
+  cursor: pointer;
+}
+
+.address-form input,
+.address-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid #e5d6c2;
+}
+
+.address-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 14px;
+  background: #d2b48c;
+  border: none;
+  color: #4b3621;
+  font-weight: 600;
+}
+
+/* SUMMARY */
+.summary-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.summary-item img {
+  width: 60px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.summary-total {
+  margin-top: 12px;
+  border-top: 1px dashed #e5d6c2;
+  padding-top: 10px;
+}
+
+.summary-total h3 {
+  margin-top: 6px;
+}
+
+/* PAYMENT */
+.payment-options div {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #eee2cf;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background: #fffdf9;
+}
+
+.payment-options .active {
+  background: #fff3e6;
+  border-color: #d2b48c;
+}
+
+.payment-details {
+  margin-top: 12px;
+  padding: 14px;
+  background: #fffaf4;
+  border-radius: 14px;
+  border: 1px solid #eee2cf;
+}
+
+.payment-details input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid #e5d6c2;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
+.pay-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #d2b48c;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b3621;
+  cursor: pointer;
+}
+
+.pay-btn:disabled {
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .payment-box {
+    grid-template-columns: 1fr;
+  }
+}

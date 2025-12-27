@@ -1,0 +1,215 @@
+/* PAGE CONTAINER */
+.wish-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* EMPTY MESSAGE */
+.empty-msg-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty-msg {
+  color: #6d4c2f;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.home-btn {
+  padding: 12px 30px;
+  background: #d4b896;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #b89a75;
+}
+
+/* PAGE TITLE */
+.text-center {
+  text-align: center;
+  font-size: 30px;
+  color: #6d4c2f;
+  margin-bottom: 20px;
+}
+
+/* WISHLIST CARD */
+.wish-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #fffaf3;
+  border: 1px solid #f0e6d9;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+}
+
+.wish-card:hover {
+  transform: translateY(-4px);
+}
+
+/* PRODUCT INFO */
+.wish-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #4a3627;
+}
+
+.wish-info h2 {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #8a735c;
+}
+
+.wish-info p {
+  margin: 4px 0;
+  color: #a0846a;
+  font-size: 14px;
+}
+
+.wish-info span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6d4c2f;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* BUTTON GROUP */
+.btns {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* ADD TO CART BUTTON */
+.tocart button {
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #d4b896, #c4a076);
+  border: none;
+  color: white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(212,184,150,0.4);
+}
+
+.tocart button:hover {
+  background: linear-gradient(135deg, #c9a47a, #b89365);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(184,154,117,0.45);
+}
+
+/* REMOVE BUTTON */
+.remove {
+  padding: 12px 22px;
+  background: #e15b54;
+  color: white;
+  border-radius: 14px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255,0,0,0.15);
+}
+
+.remove:hover {
+  background: #c9453f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(200,0,0,0.25);
+}
+
+/* GO HOME BUTTON (BOTTOM) */
+.home-btN {
+  display: block;
+  margin: 35px auto 20px;
+
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #d4b896, #c19a6d);
+
+  color: white;
+  border: none;
+  border-radius: 16px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(212,184,150,0.45);
+}
+
+.home-btN:hover {
+  background: linear-gradient(135deg, #c9a47a, #b38a5a);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(184,154,117,0.5);
+}
+
+/* =====================================
+           RESPONSIVE DESIGN
+===================================== */
+
+/* TABLET → Better spacing */
+@media (max-width: 900px) {
+  .wish-card {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .btns {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* MOBILE → Full vertical layout */
+@media (max-width: 600px) {
+  .wish-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .btns {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tocart button,
+  .remove {
+    width: 48%;
+    padding: 12px 0;
+  }
+}
+
+/* SMALL MOBILE → Perfect fit */
+@media (max-width: 420px) {
+  .tocart button,
+  .remove {
+    width: 100%;
+  }
+  
+  .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

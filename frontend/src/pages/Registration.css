@@ -1,0 +1,168 @@
+/* FULL PAGE BACKGROUND */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: url("../assets/regBan.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Background Blur Overlay */
+.register-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* FORM CARD */
+.register-card {
+  width: 380px;
+  background: #fff7ec;
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #e6d5bd;
+  position: relative;
+  z-index: 2;
+}
+
+.register-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4b3a26;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #7a6a57;
+  margin-bottom: 25px;
+}
+
+/* INPUTS */
+.input-group {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #d7c3a5;
+  background: #fffdf8;
+  font-size: 15px;
+  color: #4b3a26;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #8a5a30;
+  box-shadow: 0 0 5px rgba(138, 90, 48, 0.3);
+}
+
+.input-group small {
+  color: red;
+  font-size: 12px;
+}
+
+.ch {
+  position: relative;
+  left: 6px !important;
+  top: -5px !important;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  background: #8a5a30;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.register-btn:hover {
+  background: #6f4726;
+}
+
+/* ============================
+        RESPONSIVE
+============================ */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .register-card {
+    width: 350px;
+    padding: 32px 32px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .register-page {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 28px 24px;
+  }
+
+  .register-card h2 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .input-group input {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 420px) {
+  .register-card {
+    padding: 24px 18px;
+  }
+
+  .register-card h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  .register-btn {
+    font-size: 14px;
+    padding: 11px;
+  }
+}

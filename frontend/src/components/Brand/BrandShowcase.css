@@ -1,0 +1,126 @@
+/* =========================
+   SECTION
+========================= */
+.brand-showcase-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #faf7f2, #f5efe6);
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* =========================
+   TITLE
+========================= */
+.brand-showcase-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #4b3621;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   LOOP WRAPPER
+========================= */
+.brand-loop-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   LOOP TRACK
+========================= */
+.brand-loop-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollLoop 35s linear infinite;
+}
+
+/* Pause on hover */
+.brand-loop-wrapper:hover .brand-loop-track {
+  animation-play-state: paused;
+}
+
+/* =========================
+   BRAND CARD
+========================= */
+.brand-card {
+  min-width: 160px;
+  background: white;
+  border-radius: 18px;
+  padding: 18px 16px;
+  border: 1px solid #e6d5bd;
+  box-shadow: 0 6px 18px rgba(210, 180, 140, 0.25);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(210, 180, 140, 0.45);
+}
+
+/* =========================
+   LOGO
+========================= */
+.brand-logo-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* =========================
+   NAME
+========================= */
+.brand-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4b3621;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .brand-card {
+    min-width: 130px;
+    padding: 14px 12px;
+  }
+
+  .brand-logo-container {
+    height: 65px;
+  }
+
+  .brand-showcase-title {
+    font-size: 24px;
+  }
+}
+  

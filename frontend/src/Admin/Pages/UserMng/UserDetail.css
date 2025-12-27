@@ -1,0 +1,148 @@
+/* PAGE */
+.users-page {
+  padding: 35px;
+  background: linear-gradient(135deg, #faf7f2, #f5efe6);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* COUNTS */
+.users-page h3 {
+  display: inline-block;
+  margin-right: 25px;
+  padding: 10px 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e6d5bd;
+  box-shadow: 0 4px 12px rgba(210,180,140,0.25);
+  color: #4b3a26;
+}
+
+/* SEARCH + BUTTON */
+.users-page input {
+  margin-top: 20px;
+  padding: 10px 14px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #e6d5bd;
+  background: white;
+  outline: none;
+}
+
+.users-page input:focus {
+  border-color: #c8a97e;
+}
+
+.users-page button {
+  margin-left: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #c8a97e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.users-page button:hover {
+  background: #b08c5d;
+}
+
+/* TABLE */
+.users-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+/* HEADER */
+.users-table th {
+  text-align: left;
+  padding: 12px;
+  color: #7a6a57;
+  font-size: 14px;
+}
+
+/* ROW */
+.users-table tbody tr {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(210,180,140,0.25);
+  transition: 0.3s ease;
+}
+
+.users-table tbody tr:hover {
+  transform: translateY(-3px);
+}
+
+/* CELLS */
+.users-table td {
+  padding: 14px 16px;
+  color: #4b3a26;
+}
+
+/* AVATAR */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e6d5bd, #c8a97e);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STATUS */
+.users-table td:nth-child(5) {
+  font-weight: bold;
+}
+
+.users-table td:nth-child(5)::first-letter {
+  text-transform: uppercase;
+}
+
+/* BLOCK / UNBLOCK BUTTON */
+.users-table button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f1e6d6;
+  color: #4b3a26;
+  transition: 0.3s ease;
+}
+
+.users-table button:hover {
+  background: #e6d5bd;
+}
+
+/* PASSWORD */
+.users-table td:nth-child(4) {
+  font-size: 13px;
+  color: #9a8b77;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .users-page {
+    padding: 20px;
+  }
+
+  .users-page input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .users-page button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
