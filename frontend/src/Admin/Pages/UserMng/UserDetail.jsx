@@ -99,7 +99,7 @@ const UserDetail = () => {
                 <td>{user.email}</td>
 
                 {/* 🔒 NEVER SHOW PASSWORD */}
-                <td>••••••••</td>
+                <td>{user.password}</td>
 
                 <td>{user.acc || "active"}</td>
 

@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { useAuth } from "./AuthContext";
-import { toast } from "react-toastify";
 
 const Login = ({ setShowLogin }) => {
   const { login } = useAuth();
@@ -15,40 +14,29 @@ const Login = ({ setShowLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!agree) {
-      toast.warn("Please agree to the terms and privacy policy");
-      return;
-    }
-
-    if (loading) return;
+    if (!agree) return;
 
     setLoading(true);
     const success = await login(email, password);
     setLoading(false);
 
-    if (success) {
+    if (success === true) {
       setShowLogin(false);
     }
   };
 
   return (
-    <div className="login-popup" role="dialog" aria-modal="true">
-      <form
-        onSubmit={handleSubmit}
-        className="login-popup-container"
-      >
-        <div className="login-popup-title">
-          <h2>Sign In</h2>
+    <div className="login-popup">
+      <form onSubmit={handleSubmit} className="login-popup-container">
 
-          <button
-            type="button"
-            className="close-btn"
-            aria-label="Close login popup"
+        <div className="login-poup-title">
+          <h2 className="font-extrabold text-4xl">Sign In</h2>
+          <h2
             onClick={() => setShowLogin(false)}
+            className="close-btn font-bold text-2xl"
           >
-            ✕
-          </button>
+            X
+          </h2>
         </div>
 
         <div className="login-popup-inputs">
@@ -63,7 +51,7 @@ const Login = ({ setShowLogin }) => {
 
           <input
             type="password"
-            placeholder="••••••••"
+            placeholder="* * * * * * * *"
             required
             autoComplete="current-password"
             value={password}
@@ -71,10 +59,7 @@ const Login = ({ setShowLogin }) => {
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={loading || !agree}
-        >
+        <button type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
 
@@ -83,10 +68,9 @@ const Login = ({ setShowLogin }) => {
             type="checkbox"
             checked={agree}
             onChange={(e) => setAgree(e.target.checked)}
+            required
           />
-          <p>
-            By continuing, I agree to the terms of use & privacy policy.
-          </p>
+          <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
 
         <p>
@@ -100,6 +84,7 @@ const Login = ({ setShowLogin }) => {
             Click here
           </span>
         </p>
+
       </form>
     </div>
   );
